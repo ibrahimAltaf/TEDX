@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import "../style/Header.css";
 //
 import logo from "../assets/logo.png";
+import OurPartner from "../assets/partners.jpg";
 const Header = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container">
-          <Link to={"/"} class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-lg navbar-light ">
+        <div className="container">
+          <Link to={"/"} className="navbar-brand" href="#">
             <img className="img-logo" src={logo} alt="" />
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -20,40 +21,42 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-center"
+            className="collapse navbar-collapse justify-content-center"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <Link to={"/"} class="nav-link " aria-current="page" href="#">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link
+                  to={"/"}
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to={"/"} class="nav-link " aria-current="page" href="#">
+              <li className="nav-item">
+                <Link to={"/services"} className="nav-link" aria-current="page">
                   Services
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to={"/"} class="nav-link " aria-current="page" href="#">
-                  Galllery
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link to={"/"} class="nav-link " aria-current="page" href="#">
+
+              <li className="nav-item">
+                <Link to={"/about"} className="nav-link" aria-current="page">
                   About
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to={"/"} class="nav-link " aria-current="page" href="#">
+              <li className="nav-item">
+                <Link to={"/contact"} className="nav-link" aria-current="page">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
+          <img className="partner-logo" src={OurPartner} alt="" />
         </div>
       </nav>
     </>
